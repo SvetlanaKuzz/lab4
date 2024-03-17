@@ -30,9 +30,7 @@ def z4():
     f = 0
     s = 0
     a = str(input("Введите номер билета: "))
-    if len(a) != 6:
-        print("Неверный номер")
-    else:
+    if len(a) % 2 == 0:
         half = len(a) // 2
         f_half = int(a[:half])
         s_half = int(a[half:])
@@ -44,7 +42,8 @@ def z4():
             print(f"Билет {a} - счастливый")
         else:
             print(f"Билет {a} - несчастливый")
-
+    else:
+        print("Неверный номер")
 z1()
 z2()
 z3()
